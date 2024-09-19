@@ -1,0 +1,600 @@
+@import url(
+    'https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;800&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+    scroll-behavior: smooth;
+}
+
+/* CSS geral */
+
+/* Home Section */
+
+#home a {
+    color: #fff;
+    text-decoration: none;
+    transition: 0.3s;
+
+}
+
+#home a:hover {
+    opacity: 0.7;
+}
+
+.logo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    color: #fff;
+    opacity: 0.7;
+    text-align: center;
+    padding-top: 35%;
+}
+
+.logo h1 {
+    font-size: 60px;
+    letter-spacing: 10px;
+}
+
+.logo h5 {
+    margin-top: 2%;
+    font-family: 'Red Hat Display';
+    letter-spacing: 15px;
+}
+
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: 'Red Hat Display';
+}
+
+.navList {
+    list-style: none;
+    display: flex;
+    margin-top: 30vh;
+}
+
+.navList li {
+    letter-spacing: 3px;
+    margin-left: 32px;
+}
+
+.mobileMenu {
+    position: absolute;
+    cursor: pointer;
+    display: none;
+    margin: 70% 45%;
+}
+
+.mobileMenu div {
+    width: 32px;
+    height: 4px;
+    border-radius: 5px;
+    background: #000;
+    margin: 8px;
+}
+
+#home main {
+    background: url("imgs/home/bg.jpg") no-repeat center center;
+    background-size: cover;
+    height: 100vh;
+    opacity: 0.9;
+    box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.5);
+}
+
+@media (min-width: 1280px) {
+
+    .logo {
+        padding: 2vh;
+    }
+
+    .logo h1 {
+        font-size: 100px;
+        letter-spacing: 20px;
+        transition: 0.3s;
+    }
+
+    .sentenceKey {
+        max-width: 500px;
+        position: absolute;
+        top: 40%;
+        right: 0;
+        color: #fff;
+        transition: 0.3s;
+    }
+
+    .sentenceKey h3 {
+        font-size: 45px;
+        letter-spacing: 10px;
+        opacity: 0.7;
+    }
+
+    .navList {
+        margin-top: 70vh;
+    }
+}
+
+@media (max-width: 999px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    .sentenceKey {
+        display: none;
+    }
+
+    .navList {
+        position: fixed;
+        right: 0;
+        width: 40vw;
+        height: 50%;
+        background: #2b4066b2;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in;
+    }
+
+    .navList li {
+        margin-left: 0;
+        opacity: 0;
+    }
+
+    .navList.active {
+        transform: translateX(0);
+    }
+
+    .mobileMenu {
+        display: block;
+        position: fixed;
+    }
+
+
+    @keyframes navLinkFade {
+        from {
+            opacity: 0;
+            transform: translateX(50px);
+        } to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+}
+
+/* Home Section */
+
+/* Company Section */
+
+#company img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.5);
+}
+
+.aboutUs {
+    padding: 40px;
+    height: 100vh;
+}
+
+.aboutUs h2 {
+    font-size: 40px;
+    font-family: 'Poppins';
+    font-weight: 500;
+    letter-spacing: 4px;
+}
+
+.aboutText {
+    padding: 25px 0;
+    font-size: 18px;
+    font-family: 'Red Hat Display';
+    font-weight: 300;
+    letter-spacing: 2px;
+    text-align: justify;
+}
+
+@media (min-width: 1280px) {
+
+
+    #company img {
+        max-width: 45%;
+    }
+
+    .aboutUs {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 50px;
+        background: #312f2f17;
+        height: 89vh;
+    }
+
+    .aboutUs h2 {
+        margin-bottom: 5%;
+    }
+
+    .aboutText {
+        font-size: 24px;
+        letter-spacing: 4px;
+    }   
+
+   .content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 5%;
+   }
+
+}
+
+/* Company Section */
+
+/* Services Section */
+
+#services main {
+    background: url('imgs/services/bgServices.jpg') no-repeat center center;
+    background-size: cover;
+    height: 100vh;
+    box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.5);
+}
+
+.servicesContainer {
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.servicesContainer h2 {
+    font-size: 50px;
+    font-family: "Red Hat Display";
+    letter-spacing: 10px;
+    text-align: center;
+    padding: 40px;
+    margin-top: 5vh;
+    color: #ff7300;
+    
+}
+
+.servicesContainer a {
+    text-decoration: none;
+    color: #000;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.flipCard {
+    background-color: transparent;
+    width: 200px;
+    height: 200px;
+    perspective: 1000px;
+    margin: 10px;
+}
+
+.flipCardInner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.flipCard:hover .flipCardInner {
+    transform: rotateY(180deg);
+}
+
+.flipCardFront, .flipCardBack {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.5);
+}
+
+.flipCardFront {
+    border-radius: 10px;
+    background-color: #ff7300;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flipCardFront span {
+    font-size: 40px;
+}
+
+.flipCardBack {
+    border-radius: 10px;
+    background-color: #ff7300;
+    color: #000;
+    font-family: 'Poppins';
+    letter-spacing: 4px;
+    transform: rotateY(180deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (min-width: 999px) {
+    .servicesContainer h2 {
+        margin-top: 15%;
+    }
+}
+
+/* Services Section */
+
+/* Routes Section */
+
+#routes img {
+    max-width: 100%;
+    max-height: 500px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.5);
+}
+
+.routes {
+    padding: 40px;
+    height: 96vh;
+}
+
+.routes h2 {
+    font-size: 40px;
+    font-family: 'Poppins';
+    font-weight: 500;
+    letter-spacing: 4px;
+}
+
+.routesText {
+    padding: 25px 0;
+    font-size: 18px;
+    font-family: 'Red Hat Display';
+    font-weight: 300;
+    letter-spacing: 2px;
+    text-align: justify;
+}
+
+.secure {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.secure img {
+    height: 150px;
+}
+
+
+
+@media (min-width: 999px) {
+
+    #routes img {
+        max-width: 45%;
+    }
+
+    .routes {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 50px;
+        background: #312f2f17;
+        height: 90vh;
+    }
+
+    .routes h2 {
+        margin-bottom: 5%;
+    }
+
+    .routesText {
+        font-size: 24px;
+        letter-spacing: 4px;
+    }   
+
+   .content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 5%;
+   }
+
+}
+
+/* Routes Section */
+
+/* Gallery Section */
+
+.gallery {
+    height: 80vh;
+    padding: 50px;
+    text-align: center;
+    background-color: #dbcbcbc2;
+}
+
+.gallery h2 {
+    font-size: 40px;
+    font-family: 'Poppins';
+    font-weight: 500;
+    letter-spacing: 4px;
+}
+
+.carousel {
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    overflow: hidden;
+    margin-top: 5vh;
+}
+
+.carouselInner {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carouselItem {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+.carouselItem img {
+    width: 100%;
+    max-width: 800px;
+    height: 500px;
+    object-fit: cover;
+    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.5);
+}
+
+.carouselControl {
+    position: absolute;
+    font-size: 50px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.carouselControl.prev {
+    left: 10px;
+}
+
+.carouselControl.next {
+    right: 10px;
+}
+
+/* Gallery Section */
+
+/* Contact Section */
+
+.footer {
+    padding: 40px;
+    background: #312f2f17;
+}
+
+.footer img {
+    max-width: 250px;
+}
+
+.contact {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-family: 'Red Hat Display';
+}
+
+.contactTransporte > .email {
+    padding: 5px;
+}
+
+.contactCommercial {
+    margin-right: 5%;
+}
+
+.contactTitle {
+    font-size: 30px;
+    font-family: 'Red Hat Display';
+    font-weight: 500;
+    padding: 20px 0; 
+}
+
+.contactPerson p {
+    font-size: 20px;
+    padding: 10px 0;
+}
+
+.email {
+    display: flex;
+    align-items: center;
+}
+
+.email span {
+    margin-right: 10px;
+}
+
+
+hr {
+    width: 30vh;
+}
+
+
+.title h2 {
+    font-size: 40px;
+    font-family: 'Poppins';
+    font-weight: 500;
+    letter-spacing: 4px;
+    text-align: center;
+}
+
+.developer {
+    display: flex;
+    font-size: 18px;
+    font-family: 'Red Hat Display';
+    font-weight: 300;
+    letter-spacing: 2px;
+    padding: 20px;
+    margin-top: 5%;
+}
+
+.developer span {
+    padding: 0 20px;
+}
+
+.politiciesPrivacy {
+    font-family: 'Poppins';
+    font-size: 14px;
+}
+
+@media (min-width: 999px) {
+
+    .contactOperational {
+        margin-top: -1.5%;
+    }    
+
+    .footer {
+        height: 50vh;
+    }
+    
+    .contact {
+        flex-direction: row;
+    }
+
+    .developer {
+        position: absolute;
+        margin-top: 25%;
+    }
+
+    .footer img {
+        max-width: 250px;
+        margin-right: 50px;
+    }
+
+    .politiciesPrivacy {
+        position: absolute;
+        margin-top: 29%;
+    }
+}
+
+/* Contact Section */
